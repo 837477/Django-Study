@@ -32,13 +32,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # 장고 프로젝트 생성시 기본적으로 설치되는 App들
+    # python manage.py migrate 를 실행하면, 이 앱들이 필요한 테이블들이 DB에 생성
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pybo'
+    'board.apps.BoardConfig'
 ]
 
 MIDDLEWARE = [

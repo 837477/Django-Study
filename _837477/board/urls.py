@@ -1,7 +1,7 @@
 from django.urls import path
-from pybo import views
+from . import views
+
 
 urlpatterns = [
     path('', views.index),
-    path('test/', views.test)
 ]
