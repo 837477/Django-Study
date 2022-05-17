@@ -1,0 +1,9 @@
+{% if sample_list %}
+    <ul>
+    {% for sample in sample_list %}
+        <li><a href="{% url 'app:detail' sample_id=sample.id %}">{{ sample.content }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>질문이 없습니다.</p>
+{% endif %}
