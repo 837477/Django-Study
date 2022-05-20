@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from app.views import sample
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include('app.urls'))
+    path('api/v1/', include('app.urls')),
+    path('common/', include('common.urls')),
+    path('', sample.get_sample_list, name='index')
 ]
+
+handler404 = 'common.views.page_not_found'  # 404 헨들러
